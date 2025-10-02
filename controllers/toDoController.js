@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const toDoModel = require("../models/toDoModel");
 
 
@@ -127,16 +126,6 @@ const updateSingleToDo = async (req, res) => {
         //get to-do id 
         const toDoId = req.params.id;
 
-
-        // validate toDoId
-        // if (!mongoose.isValidObjectId(toDoId)) {
-        //     return res.status(400).json({
-        //         status: "error",
-        //         message: "Invalid to-do Id"
-        //     });
-        // };
-        
-    
         //Update to-Do
         const updatedToDo = await toDoModel.findOneAndUpdate(
             { _id: toDoId, user: userId },
@@ -180,14 +169,6 @@ const deleteToDo = async (req, res) => {
 
         //get to-do id 
         const toDoId = req.params.id;
-
-        //validate toDoId
-        // if (!mongoose.isValidObjectId(toDoId)) {
-        //     return res.status(400).json({
-        //         status: "error",
-        //         message: "Invalid to-do Id"
-        //     });
-        // };
 
         if (!toDoId) {
             return res.status(400).json({
