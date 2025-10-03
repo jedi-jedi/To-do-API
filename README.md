@@ -78,8 +78,9 @@ Git
 
 Clone the Repository
 
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/jedi-jedi/To-do-API.git
+
+cd To-do-API
 
 
 Install Dependencies
@@ -103,7 +104,9 @@ Configure Environment Variables
 Create a .env file:
 
 MONGODB_URI=your_mongodb_connection_string
+
 JWT_SECRET=your_jwt_secret_key
+
 PORT=3000
 
 
@@ -115,21 +118,33 @@ npm start
 Server runs on: http://localhost:3000
 
 📡 API Endpoints
+
 🔑 Authentication
+
 Method	Endpoint	Description
+
 POST	/users	Register a new user
+
 POST	/users/signin	Sign in & get token
+
 POST	/users/logout	Log out & blacklist token
+
 📝 To-Do Management
 
 (All require Authorization: Bearer <token> header)
 
 Method	Endpoint	Description
+
 POST	/get-Todo	Create a new to-do
+
 GET	/get-Todo	Get all to-dos (filter by ?status=)
+
 GET	/get-Todo/:id	Get a specific to-do
+
 PATCH	/update-Todo/:id	Update a to-do
+
 DELETE	/delete-Todo/:id	Delete a to-do
+
 🔔 Error Responses
 
 400 – Invalid input/parameters
@@ -200,7 +215,3 @@ Push and open a PR
 📜 License
 
 Licensed under the MIT License.
-
-Jed, I polished it to make it GitHub-ready (headings, tables, structure).
-
-👉 Do you want me to also create a sample JSON section showing example request/response payloads (so developers can copy-paste into Postman)?
